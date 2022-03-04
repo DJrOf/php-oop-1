@@ -11,34 +11,39 @@
 
 class Movie 
 {
-    public string $title;
-    public string $author;
-    public string $release_date;
-    public string $genre;
+    public  $title;
+    public  $author;
+    public  $release_date;
+    public  $genre;
    
 
-    public function __construct(string $title, string $author, string $release_date, string $genre)
+    public function __construct( $title,  $author,  $release_date,  $genre)
     {
-        $this->$title;
-        $this->$author;
-        $this->$release_date;
-        $this->$genre;
+        $this->title = $title;
+        $this->author = $author;
+        $this->release_date = $release_date;
+        $this->genre = $genre;
     }
+
+    public function getTicketPrice()
+    {
+        return 10;
+    }
+    
+
 }
 
 $pulp_fiction = new Movie('Pulp Fiction', 'Quentin Tarantino', '10/28/1994', 'Pulp'); 
-$pulp_fiction->$title = 'Pulp Fiction';
-$pulp_fiction->$author = 'Quentin Tarantino';
-$pulp_fiction->$release_date = '10/28/1994';
-$pulp_fiction->$genre = 'Pulp';
 
 
-$alien = new Movie('Pulp Fiction', 'Quentin Tarantino', '10/28/1994', 'Pulp'); 
-$alien->$title = 'Alien';
-$alien->$author = 'Ridley Scott';
-$alien->$release_date = '1979';
-$alien->$genre = 'Sci - fi';
+
+
+$alien = new Movie('Alien', 'Ridley Scott', '1979', 'Sci - Fi'); 
+
+
 
     var_dump($pulp_fiction);
+    
     var_dump($alien);
+
        
